@@ -30,7 +30,7 @@ end
 
 profile "Query 1,000 normal documents (100 times)" do
   session[:people].insert(1000.times.map do
-    { _id: Moped::BSON::ObjectId.new,
+    { _id: BSON::ObjectId.new,
       name: "John",
       created_at: Time.now,
       comment: "a"*200 }
